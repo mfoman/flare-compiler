@@ -57,6 +57,7 @@ hello = world
 (str)shout ->
   alert str
 
+shout woohoo
 
 JAVASCRIPT
 
