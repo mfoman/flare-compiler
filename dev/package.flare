@@ -1,6 +1,7 @@
-<?FLR
+<?FLARE
+// comments: true     -- default
 // minified_ext: true -- default
-// relative_path: . -- default
+// relative_path: .   -- default
 
 output:
   app/(*).flare -> app/$1.js
@@ -10,3 +11,7 @@ output:
 .sourcemap:
   app/(*)[flag:sm].flare -> app/$1.js
 ?>
+
+// Write shorts
+# = (log) ->
+  console.log log
