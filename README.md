@@ -50,7 +50,7 @@ flare: true
 I will try my best to make the best, shortest but readable compiler language.
 
 ```
-FLARESCRIPT
+--- FLARESCRIPT ---
 
 hello = world
 
@@ -59,7 +59,7 @@ hello = world
 
 shout woohoo
 
-JAVASCRIPT
+--- JAVASCRIPT ---
 
 var hello;
 hello = 'world';
