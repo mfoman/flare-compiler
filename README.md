@@ -45,3 +45,27 @@ flare: true
 ()hello ->
   alert hello world!
 ```
+
+##Declarations
+I will try my best to make the best, shortest but readable compiler language.
+
+```
+FLARESCRIPT
+
+hello = world
+
+(str)shout ->
+  alert str
+
+
+JAVASCRIPT
+
+var hello;
+hello = 'world';
+
+var shout = function(str) {
+  alert(str);
+}
+
+shout('woohoo');
+```
