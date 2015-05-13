@@ -1,0 +1,12 @@
+<?FLR
+// minified_ext: true -- default
+// relative_path: . -- default
+
+output:
+  app/(*).flare -> app/$1.js
+.compress:
+  -l app/(*)[flag:l].flare -> app/$1[min].js    // -l locked for compress only - child or local can't overwrite
+  app/(*)[flag:cp].flare -> app/$1[min].js
+.sourcemap:
+  app/(*)[flag:sm].flare -> app/$1.js
+?>

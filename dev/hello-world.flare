@@ -1,0 +1,20 @@
+[SETTINGS
+output: /[filename][min].js
+sourcemap: true
+compress: true
+flare: true
+
+// # = console.log() -- default but can get assigned
+[settings][flare][init]]
+
+// This is equivalent to console.log()
+# I am loggin this on the console!
+
+// Create function named hello world
+// Same
+{hello_world() alert hello world}
+
+hello_world = () alert hello earth
+
+hello_earth = ()
+  alert hello earth
