@@ -46,8 +46,16 @@ flare: true
   alert hello world!
 ```
 
+##Compiler Settings
+```
+strict = true
+team_standard = 'git://' // Set standard for code, so everybody on the team writes the same
+```
+
 ##Declarations
 I will try my best to make the best, shortest but readable compiler language.
+I'm splitted, I don't know if I should go with function call and declaration with or without ().
+By removing them, it adds writing speed, and by adding it it brings a little more usability and clarity.
 
 ```
 --- FLARESCRIPT ---
