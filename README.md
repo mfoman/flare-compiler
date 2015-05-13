@@ -54,7 +54,7 @@ I will try my best to make the best, shortest but readable compiler language.
 
 hello = world
 
-(str)shout ->
+shout(str) ->
   alert str
 
 shout woohoo
