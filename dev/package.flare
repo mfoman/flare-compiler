@@ -1,17 +1,23 @@
-<?FLARE
+<?SHELL
 // comments: true     -- default
 // minified_ext: true -- default
 // relative_path: .   -- default
 
-output:
+output
   app/(*).flare -> app/$1.js
-.compress:
+.compress
   -l app/(*)[flag:l].flare -> app/$1[min].js    // -l locked for compress only - child or local can't overwrite
   app/(*)[flag:cp].flare -> app/$1[min].js
-.sourcemap:
+.sourcemap
   app/(*)[flag:sm].flare -> app/$1.js
-?>
 
 // Write shorts
-# = (log) ->
-  console.log log
+#(script) = console.log()
+
+/* Environments
+doc ->
+  flare ->
+    shell
+    code
+*/
+?>
