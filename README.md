@@ -18,9 +18,9 @@ example:
       inside doc->flare->shell
     </shell>
 
-    \<script>
+    <script>
       inside doc->flare->script
     </script>
-  </flare>
-</doc>
+  \</flare>
+\</doc>
 </code>
