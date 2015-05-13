@@ -62,6 +62,8 @@ shout woohoo
 --- JAVASCRIPT ---
 
 var hello;
+var shout;
+
 hello = 'world';
 
 var shout = function(str) {
