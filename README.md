@@ -11,6 +11,9 @@ Environments in FLARE is like tags in html5,
 and works most like function scopes.
 
 example:
+<code>
+  hello!
+</code>
 <doc>
   <flare>
     <shell>
