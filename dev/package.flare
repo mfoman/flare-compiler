@@ -1,7 +1,9 @@
 <?SHELL // This opens the shell environment
-// comments: true     -- default
-// minified_ext: true -- default
-// relative_path: .   -- default
+// strict: false        -- default
+// team_standard: false -- default
+// comments: true       -- default
+// minified_ext: true   -- default
+// relative_path: .     -- default
 
 output
     flare/1.flare                                                  // find `flare/1.flare` and output in same folder, as .js
