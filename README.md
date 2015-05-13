@@ -1,7 +1,7 @@
 #README
 This is my first compiler, wish me luck! :-)
 
-#Environments
+##Environments
 ```
 DOCUMENT(doc) ->
   Flare(flare) ->
