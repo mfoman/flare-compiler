@@ -30,15 +30,18 @@ example:
 Even though there can me multiple environments in the same environment,
 only one can be the superior environment.
 
-So when you write .flare scripts, you will automaticly be in the script-environment,
+So when you write .flare scripts, you will automaticly be in the (superior)script-environment,
 but to access a parallel environment like shell in the superior environment, use this ```<?SHELL ?>```
 
 example:
 ```
+// SCRIPT environment
 <?SHELL
+// SHELL environment
 flare: true
 ?>
 
+// back to SCRIPT environment
 ()hello ->
   alert hello world!
 ```
