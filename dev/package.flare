@@ -1,23 +1,32 @@
-<?SHELL
+<?SHELL // This opens the shell environment
 // comments: true     -- default
 // minified_ext: true -- default
 // relative_path: .   -- default
 
 output
-  app/(*).flare -> app/$1.js
-.compress
-  -l app/(*)[flag:l].flare -> app/$1[min].js    // -l locked for compress only - child or local can't overwrite
-  app/(*)[flag:cp].flare -> app/$1[min].js
-.sourcemap
-  app/(*)[flag:sm].flare -> app/$1.js
+    flare/1.flare                                                  // find `flare/1.flare` and output in same folder, as .js
+    flare/2.flare     dist/                                        // defined end folder, filename is same except for the extension .flare -> .js
+    flare/(*-3).flare dist/$1.js                                   // regual expression and sent to `$` for use
+    flare/*-3.flare   dist/[filename].js                           // [filename] is an alternative
 
-// Write shorts
-#(script) = console.log()
+.compress                                                          // Instead of adding -c flag for each file, you can trail with .compress
+    flare/4.flare                                                  // 5.flare is outputted AND compressed
+    flare/5.flare     dist/                                        //
+    flare/6.flare     dist/6[min].js                               // [min] applies .min extension unless set to false in compiler settings
 
-/* Environments
-doc ->
-  flare ->
-    shell
-    code
-*/
+:locked                                                            // : is a trail-branch. :locked is parallel with :sourcemap. One branch alone isn't really a branch
+    flare/11.flare                                                 //
+
+:sourcemap                                                         // files inside :sourcemap is outputted, compressed and sourcemapped, but NOT locked as the two is parallel
+    flare/7.flare     7.min.js                                     // 7.flare is compressed to same folder, and the sourcemap goes to the same folder
+    flare/8.flare     dist/8.min.js      maps/                     // 8.flare is compressed to dist/ and the sourcemap goes to maps
+    flare/9.flare     dist/9.min.js      maps/[filename].map       // 9.flare's sourcemap is renamed to [filename] which is always the first scripts name(9.flare)
+
+.locked                                                            // you can continue building your brand. Files inside is outputted, compressed, sourcemapped AND THEN locked, not by the parallel though
+    flare/10.flare    dist/[filename].js maps/[filename].map       //
+
+// Write shorts/bindings
+// {bind}({env}) = {short}
+#:shell  = flare [filename] // You can now write '#' in the shell-env to compile it to "flare package.flare" in this case
+#:script = console.log()    // You can now write '# hello [creator]!' in the script-env to compile it to "console.log('hello Frederik Raisa<Frederikblunck@gmail.com>')"
 ?>
