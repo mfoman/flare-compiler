@@ -12,8 +12,6 @@ and works most like function scopes.
 
 example:
 <code>
-  hello!
-</code>
 <doc>
   <flare>
     <shell>
@@ -25,3 +23,4 @@ example:
     </script>
   </flare>
 </doc>
+</code>
